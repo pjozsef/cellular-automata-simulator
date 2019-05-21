@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="560.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="hu.elte.inf.elte.pojsaai.cellularautomatasimulator.controller.RenderScreenController">
+  <children>
+    <AnchorPane id="c" fx:id="CAOutputContainer" layoutX="0.0" layoutY="0.0" prefHeight="546.0" prefWidth="560.0" />
+    <Slider layoutX="0.0" layoutY="570.0" prefWidth="280.0" />
+    <BorderPane layoutX="280.0" layoutY="546.0" prefHeight="54.0" prefWidth="280.0">
+      <left>
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+          <children>
+            <Button fx:id="start" mnemonicParsing="false" onAction="#start" text="Start" />
+            <Button id="stop" fx:id="stop" disable="true" mnemonicParsing="false" onAction="#stop" text="Stop" />
+          </children>
+        </HBox>
+      </left>
+      <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+      <right>
+        <Button mnemonicParsing="false" onAction="#switchScreen" text="Edit" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+      </right>
+    </BorderPane>
+  </children>
+</AnchorPane>

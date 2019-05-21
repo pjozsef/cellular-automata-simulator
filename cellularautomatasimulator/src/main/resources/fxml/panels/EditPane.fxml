@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.effect.*?>
+<?import hu.elte.inf.people.pojsaai.cellularautomatasimulator.component.edit.*?>
+
+<fx:root xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8">
+    
+    <VBox alignment="CENTER" prefHeight="50.0"  spacing="10">
+        <children>
+            <HBox alignment="CENTER" spacing="100" >
+                <VBox.margin>                    
+                    <Insets>                        
+                        <top>20</top>                    
+                    </Insets>                
+                </VBox.margin>               
+                <children>
+                    <VBox alignment="CENTER" spacing="10">
+                        <children>
+                            <Button fx:id="renderButton" mnemonicParsing="false" text="Render" textAlignment="CENTER"/>
+                            <Button fx:id="stopButton" disable="true"  mnemonicParsing="false" text="Stop" textAlignment="CENTER" />
+                        </children>
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="10">
+                        <HBox.margin>                    
+                            <Insets>                        
+                                <top>40</top>                    
+                            </Insets>                
+                        </HBox.margin>   
+                        <children>
+                            <Button fx:id="saveButton" disable="false"  mnemonicParsing="false" text="Save" textAlignment="CENTER" />
+                            <Button fx:id="loadButton" disable="false"  mnemonicParsing="false" text="Load" textAlignment="CENTER" />
+                            <Button fx:id="exportButton" disable="false"  mnemonicParsing="false" text="Export" textAlignment="CENTER" />
+                        </children>
+                    </VBox>
+                    
+                </children>
+            </HBox>
+            
+            
+            
+            <AnchorPane id="stateEditorContainer" fx:id="stateEditorContainer" prefHeight="370" prefWidth="370">
+                <VBox.margin>
+                    <Insets>
+                        <left>20</left>
+                    </Insets>
+                </VBox.margin>
+            </AnchorPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Number of states:">
+                
+            </Label>
+            <HBox id="HBox" alignment="TOP_CENTER" spacing="0.0">
+                <children>
+                    <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#decNodes" text="-">
+                        <HBox.margin>
+                            <Insets right="3.0" />
+                        </HBox.margin>
+                    </Button>
+                    <Slider fx:id="nodeCountSlider" majorTickUnit="1" max="10.0" min="1.0" minorTickCount="0" prefWidth="279.9999000000025" showTickLabels="true" showTickMarks="true" snapToTicks="true" blockIncrement="1"/>
+                    <Button mnemonicParsing="false" onAction="#incNodes" text="+"/>
+                </children>
+                <VBox.margin>
+                    <Insets bottom="10"/>
+                </VBox.margin>
+            </HBox>
+            <RuleTextArea fx:id="ruleTextArea" disable="true"  prefHeight="200" minHeight="100"  prefWidth="200.0" maxWidth="390">
+                <VBox.margin>
+                    <Insets bottom="10" right="10" left="10"/>
+                </VBox.margin>                
+            </RuleTextArea>
+            <RandomSeedChooser fx:id="randomSeedChooser">
+                <VBox.margin>
+                    <Insets>
+                        <left>20</left>
+                    </Insets>
+                </VBox.margin>
+            </RandomSeedChooser>
+            <StartStateConfigChooser fx:id="startStateConfigChooser">
+                <VBox.margin>
+                    <Insets>
+                        <left>10</left>
+                    </Insets>
+                </VBox.margin>
+            </StartStateConfigChooser>
+        </children>
+    </VBox>
+            
+</fx:root>
